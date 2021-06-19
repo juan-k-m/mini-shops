@@ -1,0 +1,215 @@
+.field-container{
+  display: block;
+  .unitize(margin,20);
+}
+
+.is--ctl-vendedor{
+  .content--wrapper{
+    .unitize(margin-left,280);
+    .register--form{
+      .panel{
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: space-around;
+        .upload_p_trigger{
+          .unitize(font-size,16);
+          font-weight: bold;
+          color:@brand-secondary-dark;
+          .unitize(margin-bottom, 9);
+        }
+      }
+
+    }
+
+    .panel-border:nth-child(1) {
+      display: flex;
+      justify-content: space-around;
+    }
+    .panel-border{
+      border: solid @gray-dark thin;
+      margin: 2% 1%;
+    }
+    .image--wrapper-edit {
+      display: flex;
+      flex-wrap: wrap;
+      .image--wrapper {
+        width: 24%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: solid thin @gray-dark;
+        margin: 2px;
+        padding: 0 10px;
+        .div-image{
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 10vw;
+        }
+
+      }
+    }
+  }
+
+
+}
+
+.supplier-cover-image{
+  height: 400px;
+  background-position: center !important;
+  background-size: cover !important;
+  background-color: #ecedee !important;
+  filter: brightness(.7);
+
+}
+
+.is--act-manufacturer .vendor--info.panel {
+  background: #fff;
+  padding: 30px;
+  margin-top: -135px;
+  border-radius: 5px;
+  position: relative;
+  border-top: 10px solid #ecedee;
+  box-shadow: 0px -17px 14px -12px #464e5c;
+}
+
+.is--act-manufacturer{
+  section.content-main.container.block-group{
+    box-shadow: unset;
+  }
+  .listing--actions{
+    border:none;
+    background: none;
+
+  }
+  .page-wrap{
+    background: #FFFFFF;
+    section.content-main.container.block-group {
+      max-width: 80rem;
+      .box--image {
+        width: 33%;
+        height: 24vw;
+      }
+    }
+  }
+
+}
+.do-not-show{
+  display: none;
+}
+.error-show{
+  display: block;
+}
+.supplierNameDetail{
+  font-weight: bold;
+}
+
+.is--act-registro{
+  .content--wrapper{
+    margin-left: 0;
+    .register--content{
+      width: 60%;
+      margin-top: 0;
+      margin-left: 10px;
+      .register--form{
+        .panel.register--address{
+          //display: block;
+        }
+      }
+
+    }
+
+  }
+
+}
+
+.is--act-productos{
+
+  .account--no-orders-info{
+    float: right;
+    margin-top: 5%;
+    width: 100%;
+
+  }
+  .j-new-product {
+    margin: 2% auto;
+  }
+}
+.is--act-productos{
+
+
+  .product--box.box-- {
+    width: 50%;
+
+    .product--wrapper-edit {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      img {
+        position: unset !important;
+      }
+      .buttons--action-edit-delete {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        a {
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+
+  .red--color{
+    color: red;
+  }
+  .green--color{
+    color:green;
+  }
+  .info--hidden{
+    display: none;
+    position: absolute;
+    .unitize(bottom, -346);
+    background: #f3f3f3;
+    z-index: 10;
+    padding: 22px 18px;
+    border-radius: 3px;
+  }
+  p.product--title{
+    height: 1em;
+    i{
+      float: right;
+      font-size: 8px;
+      padding: 5px;
+    }
+  }
+  .product-name{
+    cursor:pointer;
+  }
+}
+.is--ctl-tiendas{
+
+  .content--wrapper-inner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    .wrapper-shops {
+      width: 23%;
+      height: 17vw;
+      margin: 8px;
+      border: solid @gray-dark thin;
+      .shop {
+        height: 17vw;
+        background-size: contain !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .logo-shop{
+          width: 72%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <!-- @todo Add your services here -->
+
+
+        <service id="vendedor.subscriber.frontend" class="Vendedor\Subscriber\Frontend" public="true">
+            <argument type="service" id="service_container" />
+            <tag name="shopware.event_subscriber" />
+        </service>
+
+        <service id="vendedor.subscriber.controller_path" class="Vendedor\Subscriber\ControllerPath" public="true">
+            <argument type="service" id="service_container" />
+            <tag name="shopware.event_subscriber" />
+        </service>
+
+        <service id="vendedor.subscriber.events_register" class="Vendedor\Subscriber\EventsRegister" public="true">
+       <argument>%vendedor.plugin_dir%</argument>
+       <argument type="service" id="template"/>
+       <tag name="shopware.event_subscriber"/>
+       </service>
+
+        <service id="vendedor.subscriber.template_registration" class="Vendedor\Subscriber\TemplateRegistration" public="true">
+            <argument>%vendedor.plugin_dir%</argument>
+            <argument type="service" id="template"/>
+            <tag name="shopware.event_subscriber"/>
+        </service>
+        <service id="vendedor.helper_functions" class="Vendedor\Services\HelperFunctions" public="true"/>
+        <service id="vendedor.api_helper" class="Vendedor\Services\ApiHelper" public="true"/>
+        <service id="vendedor.order" class="Vendedor\Services\Order" public="true"/>
+        <service id="vendedor.pedidos" class="Vendedor\Services\Pedidos" public="true"/>
+        <service id="vendedor.shop" class="Vendedor\Services\Shop" public="true"/>
+        <service id="vendedor.producto" class="Vendedor\Services\Producto" public="true"/>
+        <service id="vendedor.image" class="Vendedor\Services\Image" public="true"/>
+        <service id="vendedor.supplier" class="Vendedor\Services\Supplier" public="true"/>
+
+
+    </services>
+</container>
