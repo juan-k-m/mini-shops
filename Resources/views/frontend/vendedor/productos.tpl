@@ -27,7 +27,7 @@
     <div class="alert--content">El producto: <strong>{$articleUpdated}</strong> fue actualizado.</div>
 </div>
 {/if}
-
+{*verify if there are products in DB*}
 {if $stepShopArticles}
 {block name="frontend_account_orders_info_empty"}
 <div class="account--no-orders-info">
